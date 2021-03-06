@@ -15,8 +15,8 @@ style.use('ggplot')
 ### export data from csv - biomass estimated from abundance data ###
 
 
-df =pd.read_csv('E:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\GLOBAL_MAP_PLOTS\selected_traps_globalmap.csv')#first parameter is the filename and the second parameter is the sheet
-dfNet = pd.read_csv('E:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\GLOBAL_MAP_PLOTS\\Net_global_map.csv')
+df =pd.read_csv('selected_traps_globalmap.csv')
+dfNet = pd.read_csv('Net_global_map.csv')
 df.shape
 # lat- lon
 lonsNet = dfNet['lon']
