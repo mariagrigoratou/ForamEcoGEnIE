@@ -10,28 +10,28 @@ import xlsxwriter
 
 #get the data
 #subpolar 
-subpolar_present    = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "B:Q")
-subpolar_2050rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "T:AI") 
-subpolar_2100rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "AL:BA") 
-#subpolar_2100rcp6   = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "BD:BS")
+subpolar_present    = pd.read_excel('genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "B:Q")
+subpolar_2050rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "T:AI") 
+subpolar_2100rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "AL:BA") 
+#subpolar_2100rcp6   = pd.read_excel('genie_outpout.xlsx', sheet_name='subpolar_STATS_foram_only',   usecols = "BD:BS")
 
 #temperate 
-temp_present    = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "B:Q") 
-temp_2050rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "T:AI") 
-temp_2100rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "AL:BA") 
-temp_2100rcp6   = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "BD:BS") 
+temp_present    = pd.read_excel('genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "B:Q") 
+temp_2050rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "T:AI") 
+temp_2100rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "AL:BA") 
+temp_2100rcp6   = pd.read_excel('genie_outpout.xlsx', sheet_name='temp_STATS_foram_only',   usecols = "BD:BS") 
 
 #tropics
-trop_present    = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "B:Q") 
-trop_2050rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "T:AI") 
-trop_2100rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "AL:BA") 
-trop_2100rcp6   = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "BD:BS") 
+trop_present    = pd.read_excel('genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "B:Q") 
+trop_2050rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "T:AI") 
+trop_2100rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "AL:BA") 
+trop_2100rcp6   = pd.read_excel('genie_outpout.xlsx', sheet_name='trop_STATS_foram_only',   usecols = "BD:BS") 
 
 #Indian ocean
-io_present    = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "B:Q") 
-io_2050rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "T:AI") 
-io_2100rcp8p5 = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "AL:BA") 
-io_2100rcp6   = pd.read_excel('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "BD:BS") 
+io_present    = pd.read_excel('genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "B:Q") 
+io_2050rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "T:AI") 
+io_2100rcp8p5 = pd.read_excel('genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "AL:BA") 
+io_2100rcp6   = pd.read_excel('\genie_outpout.xlsx', sheet_name='io_STATS_foram_only',   usecols = "BD:BS") 
 
 ###########################################################################################################################
 ## spearman pairwise_corr, foram vs all
@@ -60,7 +60,7 @@ corr_io_2100rcp6    = pd.DataFrame(pg.pairwise_corr(io_2100rcp6, columns=['foram
 ###########################################################################################################################
 
 
-result = pd.ExcelWriter('E:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\pingouin_output\\pairwise_corr_foram_only.xlsx', engine='xlsxwriter')
+result = pd.ExcelWriter('pairwise_corr_foram_only.xlsx', engine='xlsxwriter')
 workbook = result.book
 #subpolar
 corr_subpolar_present.to_excel(result, 'subpolar',startcol=0,startrow=0)
