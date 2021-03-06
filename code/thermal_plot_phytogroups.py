@@ -12,7 +12,7 @@ from matplotlib import style
 import seaborn as sns 
 
 
-df = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\RCP\\thermal_plot.csv')
+df = pd.read_csv('thermal_plot.csv')
 df.shape
 df.dtypes
 
