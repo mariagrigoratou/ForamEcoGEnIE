@@ -33,7 +33,7 @@ The commands to run the two model configurations are listed as follows:
 
 ./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MG ForECOGEM.8P7Z1F_sigma2_palatability09_RCP8p5 400 ForamECOGEM.8P7Z1F_Grigoratou_10000y 
 
-
+Details for the data metalanalysis can be found in the data forlder. The code for the figs and statistical analysis can be found in the code folder
 ################################################################
 ################################################################
 ################################################################
