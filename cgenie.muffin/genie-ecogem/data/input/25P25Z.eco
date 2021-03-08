@@ -1,0 +1,78 @@
+
+ 01                 02    03
+ \/                 \/    \/
+
+-START-OF-DATA-
+ Phytoplankton     0.62   1
+ Phytoplankton     0.78   1
+ Phytoplankton     0.98   1
+ Phytoplankton     1.24   1
+ Phytoplankton     1.56   1
+ Phytoplankton     1.97   1
+ Phytoplankton     2.48   1
+ Phytoplankton     3.13   1
+ Phytoplankton     3.94   1
+ Phytoplankton     4.97   1
+ Phytoplankton     6.25   1
+ Phytoplankton     7.88   1
+ Phytoplankton     9.93   1
+ Phytoplankton    12.50   1
+ Phytoplankton    15.76   1
+ Phytoplankton    19.85   1
+ Phytoplankton    25.01   1
+ Phytoplankton    31.51   1
+ Phytoplankton    39.71   1
+ Phytoplankton    50.02   1
+ Phytoplankton    63.03   1
+ Phytoplankton    79.41   1
+ Phytoplankton   100.05   1
+ Phytoplankton   126.06   1
+ Phytoplankton   158.82   1
+ Zooplankton       6.20   1
+ Zooplankton       7.80   1
+ Zooplankton       9.80   1
+ Zooplankton      12.40   1
+ Zooplankton      15.60   1
+ Zooplankton      19.70   1
+ Zooplankton      24.80   1
+ Zooplankton      31.30   1
+ Zooplankton      39.40   1
+ Zooplankton      49.70   1
+ Zooplankton      62.50   1
+ Zooplankton      78.80   1
+ Zooplankton      99.30   1
+ Zooplankton     125.00   1
+ Zooplankton     157.60   1
+ Zooplankton     198.50   1
+ Zooplankton     250.10   1
+ Zooplankton     315.10   1
+ Zooplankton     397.10   1
+ Zooplankton     500.20   1
+ Zooplankton     630.00   1
+ Zooplankton     794.10   1
+ Zooplankton    1000.50   1
+ Zooplankton    1260.60   1
+ Zooplankton    1588.20   1
+-END-OF-DATA-
+
+ /\                 /\    /\
+ 01                 02    03
+
+DATA FORMAT AND ORDER
+---------------------
+
+COLUMN #01: plankton functional type name
+COLUMN #02: plankton diameter (micrometers)
+COLUMN #03: number of randomised replicates
+
+INFO: TRACER ASSIGNMENT RULES
+-----------------------------
+Plankton functional type one of: Prochlorococcus
+                                 Synechococcus
+                                 Picoeukaryote
+                                 Diatom
+                                 Coccolithophore
+                                 Diazotroph
+                                 Zooplankton
+                                 Mixotroph
+
