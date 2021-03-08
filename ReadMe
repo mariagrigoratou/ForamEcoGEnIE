@@ -1,0 +1,39 @@
+################################################################
+### readme.txt #################################################
+################################################################
+
+For:
+Exploring the impact of climate change on non-spinose planktonic foraminifera global distribution with a trait-based ecosystem model 
+Maria Grigoratou, Fanny M. Monteiro, Jamie D. Wilson, Andy Ridgwell, Daniela N. Schmidt
+
+################################################################
+March 01, 2021 -- README.txt file creation (M.G)
+################################################################
+
+Provided is the code used to create the model experiments presented in the paper.
+Also given are the configuration files necessary to run the model experiments.
+
+### model experiments -- spinups ###############################
+
+All experiments are run from:
+$HOME/cgenie.muffin/genie-main
+(unless a different installation directory has been used)
+
+The commands to run the two model configurations are listed as follows:
+
+(1) Foramecongenie 10,000 year run 
+
+./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MG ForamECOGEM.8P7Z1F_Grigoratou_10000y 10000
+
+(2) Foramecongenie RCP6 with 10,000 year spin up 
+
+./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MG ForECOGEM.8P7Z1F_sigma2_palatability09_RCP6p0 400 ForamECOGEM.8P7Z1F_Grigoratou_10000y 
+
+(3) Foramecongenie RCP8.5 with 10,000 year spin up 
+
+./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MG ForECOGEM.8P7Z1F_sigma2_palatability09_RCP8p5 400 ForamECOGEM.8P7Z1F_Grigoratou_10000y 
+
+
+################################################################
+################################################################
+################################################################
