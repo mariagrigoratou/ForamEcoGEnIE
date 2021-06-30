@@ -20,7 +20,7 @@ data		: includes all the field and modelled data (row and datametanalysis)
 
 Each folder contains a README.txt with more details. 
 
-For any questions please contanct me on: maria.grigoratou@gmail.com (Maria Grigoratou) 
+For any questions please send me an email: maria.grigoratou1@gmail.com (Maria Grigoratou) 
 
 
 

@@ -11,10 +11,10 @@ figure 4
 traps_Grigoratou_et_al_2021.py
 
 Figure 6a
-thermal_plot_forams_biomass.py
+XX
 
 Figure 6b
-thermal_export.py
+XX
 
 statistical analysis
 pinguin_normality_test.py
@@ -39,3 +39,7 @@ figures SM7-SM9
 thermal_plot_total_and_foram.py
 thermal_plot_phytogroups.py
 thermal_plot_zoogroups.py
+
+
+
+for any questions or comments please send me an email (Maria Grigoratou, maria.grigoratou1@gmail.com)

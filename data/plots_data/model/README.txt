@@ -24,6 +24,7 @@ sigma2pal09_biomass.csv		: the model output for figure SMX (foraminifera biomass
 
 zoo_biomass_seasonal 		: the model output for figure SMX (zoo 190um biomass)
 
-thermal_plot_all		: the model output for figures SMX - SMX
+thermal_plot_all		: the model output for figures SM2, SM7-SM9
 
-thermal_plot_export_average	: the model output for figure SMX (foraminifera carbonate production)
+
+for any questions or comments please send me an email (Maria Grigoratou, maria.grigoratou1@gmail.com)
