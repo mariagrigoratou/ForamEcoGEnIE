@@ -7,7 +7,7 @@ Exploring the impact of climate change on non-spinose planktonic foraminifera gl
 Maria Grigoratou, Fanny M. Monteiro, Jamie D. Wilson, Andy Ridgwell, Daniela N. Schmidt
 
 ################################################################
-March 01, 2021 -- README.txt file creation (M.G)
+June 30, 2021 -- README.txt file creation (M.G)
 ################################################################
 
 Provided is the code used to create the model experiments presented in the paper.
@@ -23,15 +23,15 @@ The commands to run the two model configurations are listed as follows:
 
 (1) Foramecongenie 10,000 year run 
 
-./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MG ForamECOGEM.8P7Z1F_Grigoratou_10000y 10000
+./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MS/grigoratouetal.2021 ForamECOGEM.8P7Z1F.Grigoratou 10000
 
 (2) Foramecongenie RCP6 with 10,000 year spin up 
 
-./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MG ForECOGEM.8P7Z1F_sigma2_palatability09_RCP6p0 400 ForamECOGEM.8P7Z1F_Grigoratou_10000y 
+./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MS/grigoratouetal.2021 ForECOGEM.8P7Z1F_sigma2_palatability09_RCP6p0 435  ForamECOGEM.8P7Z1F.Grigoratou 
 
 (3) Foramecongenie RCP8.5 with 10,000 year spin up 
 
-./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MG ForECOGEM.8P7Z1F_sigma2_palatability09_RCP8p5 400 ForamECOGEM.8P7Z1F_Grigoratou_10000y 
+./runmuffin.sh muffin.CBE.worlg4.BASESFeTDTL MS/grigoratouetal.2021 ForECOGEM.8P7Z1F_sigma2_palatability09_RCP8p5 435 ForamECOGEM.8P7Z1F.Grigoratou  
 
 Details for the data metalanalysis can be found in the data forlder. The code for the figs and statistical analysis can be found in the code folder
 ################################################################
