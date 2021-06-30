@@ -5,7 +5,7 @@ import numpy as np
 from matplotlib import colors
 import time
 from scipy.integrate import odeint
-from scipy.interpolate import spline
+from scipy.interpolate import interp1d
 import pandas as pd
 import csv
 #from matplotlib import style
@@ -14,31 +14,31 @@ import csv
 
 ###---------------------------------- read csv data ----------------------------------------------------###
 
-df_genie = pd.read_csv('sigma2pal09_export.csv')
+df_genie = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\sigma2pal09_export.csv')
 #df_genie.dropna(inplace=True)
-df_NA = pd.read_csv('Jonkers_2010_Subpolar_Atlantic.csv')
+df_NA = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Jonkers_2010_Subpolar_Atlantic.csv')
 #df_NA.dropna(inplace=True)
-df_trap_Papa = pd.read_csv('Papa_trap.csv')
+df_trap_Papa = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Papa_trap.csv')
 #df_trap_Papa.dropna(inplace=True)
-df_Azores = pd.read_csv('Azores_trap.csv')
+df_Azores = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Azores_trap.csv')
 #df_Azores.dropna(inplace=True)
-df_Cape_Blanc = pd.read_csv('Cape_Blanc.csv')
+df_Cape_Blanc = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Cape_Blanc.csv')
 #df_Cape_Blanc.dropna(inplace=True)
-df_Southern_Ocean = pd.read_csv('W_Sea_a.csv')
+df_Southern_Ocean = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\W_Sea_a.csv')
 #df_Southern_Ocean.dropna(inplace=True)
-df_Southern_Ocean_two = pd.read_csv('W_Sea_b.csv')
+df_Southern_Ocean_two = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\W_Sea_b.csv')
 #f_Southern_Ocean_two.dropna(inplace=True)
-df_subtropics_Japan = pd.read_csv('subtropics_Japan.csv')
+df_subtropics_Japan = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\subtropics_Japan.csv')
 #df_subtropics_Japan.dropna(inplace=True)
-df_temperate_Japan = pd.read_csv('Temperate_Japan.csv')
+df_temperate_Japan = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Temperate_Japan.csv')
 #df_temperate_Japan.dropna(inplace=True)
-df_Sargasso = pd.read_csv('Sargasso.csv')
+df_Sargasso = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Sargasso.csv')
 #df_Sargasso.dropna(inplace=True)
-df_Brazil = pd.read_csv('Brazil.csv')
+df_Brazil = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Brazil.csv')
 #df_Brazil.dropna(inplace=True)
-df_Arabian = pd.read_csv('Arabian.csv')
+df_Arabian = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Arabian.csv')
 #df_Arabian.dropna(inplace=True)
-df_Subantarctica = pd.read_csv('Subantarctica.csv')
+df_Subantarctica = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Subantarctica.csv')
 #df_Subantarctica.dropna(inplace=True)
 
 ###------------------------------ SUBPOLAR ATLANTIC ----------------------------------------------------###
@@ -157,7 +157,7 @@ Sargasso_abund_trap = np.log10(Sargasso_abun_trap)
 ###------------------------------------ BRAZIL ---------------------------------------------------###
 
 Brazil_month_gen = df_genie['Month']
-Brazil_genie = df_genie['Biomass_Brazil'] 
+Brazil_genie = df_genie['W_Atlantic'] 
 Brazil_month_trap = df_Brazil['month']
 Brazil_abun_trap = df_Brazil['DAILY(mgC)'] 
 
@@ -206,7 +206,7 @@ color1= 'tab:red'
 
 ###------------------------------ SUBPOLAR ATLANTIC ----------------------------------------------------###
 
-plt.subplot(z[0,0])
+plt.subplot(431)
 plt.margins(x=0)
 plt.ylim(-5, 4)
 
@@ -221,7 +221,7 @@ plt.title('Subpolar Atlantic (No 15)')
 
 
 ###------------------------------ SARGASSO ----------------------------------------------------###
-plt.subplot(z[0,1])
+plt.subplot(432)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -233,7 +233,7 @@ trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap'
 plt.title('Sargasso (No 16)')
 plt.xticks(rotation=45)
 ###---------------------------------------- CAPE BLANC ---------------------------------------------------###
-plt.subplot(z[0,2])
+plt.subplot(433)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -246,7 +246,7 @@ plt.title('Cape Blanc (No 17)')
 plt.xticks(rotation=45)
 #plt.legend(bbox_to_anchor=(0.8,0.90), loc='2', ncol=1,borderaxespad=0., fontsize=13)
 ###---------------------------------------- AZORES ------------------------------------------------------###
-plt.subplot(z[1,0])
+plt.subplot(434)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -258,7 +258,7 @@ trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap'
 plt.title('Azores (No 18)')
 plt.xticks(rotation=45)
 ###---------------------------------------- BRAZIL ------------------------------------------------------###
-plt.subplot(z[1,1])
+plt.subplot(435)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -271,7 +271,7 @@ trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap'
 plt.title('W Atlantic (No 19)')
 plt.xticks(rotation=45)
 ###---------------------------------------- ARABIAN SEA ------------------------------------------------------###
-plt.subplot(z[1,2])
+plt.subplot(436)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -285,7 +285,7 @@ plt.title('Arabian Sea (No 20)')
 plt.xticks(rotation=45)
 
 ###---------------------------------------- PAPA -------------------------------------------------------###
-plt.subplot(z[2,0])
+plt.subplot(437)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -298,7 +298,7 @@ plt.title('Papa (No 21)')
 plt.xticks(rotation=45)
 
 ###------------------------------------ TEMPERATE JAPAN ---------------------------------------------------###
-plt.subplot(z[2,1])
+plt.subplot(438)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -311,7 +311,7 @@ plt.title('NW Pacific subarctic (No 22)')
 plt.xticks(rotation=45)
 
 ###------------------------------------ SUBTROPICS JAPAN ---------------------------------------------------###
-plt.subplot(z[2,2])
+plt.subplot(439)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 x,y = (subtropics_Japan_abund_genie, subtropics_Japan_month_genie)
@@ -325,7 +325,7 @@ plt.xticks(rotation=45)
 
 
 ###------------------------------------ Weddell Sea a -34.8E Lon ---------------------------------------------------###
-plt.subplot(z[3,0])
+plt.subplot(4,3,10)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 x,y = (Southern_Ocean_abund_genie, Southern_Ocean_month_genie)
@@ -338,7 +338,7 @@ plt.title('Weddell Sea A (No 24)')
 plt.xticks(rotation=45)
 
 ###------------------------------------ Weddell Sea b -2E Lon ---------------------------------------------------###
-plt.subplot(z[3,1])
+plt.subplot(4,3,11)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -350,7 +350,7 @@ trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap'
 plt.title('Weddell Sea B (No 25)')
 plt.xticks(rotation=45)
 ###------------------------------------  Subantarctica ---------------------------------------------------###
-plt.subplot(z[3,2])
+plt.subplot(4,3,12)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -375,7 +375,7 @@ fig.text(0.50, 0.95,
         'Foraminifera export production',
         ha='center', fontsize = 16)
 
-fig.text(0.080, 0.55,
+fig.text(0.080, 0.25,
         'Biomass Fluxes Log$_{10}$(mg C m$^{-2}$ d$^{-2}$)',
         ha='center', rotation = 'vertical', fontsize = 16)
 
