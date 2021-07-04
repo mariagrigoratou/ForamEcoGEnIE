@@ -11,10 +11,8 @@ figure 4
 traps_Grigoratou_et_al_2021.py
 
 Figure 6a
-XX
+future_biomass_anomaly
 
-Figure 6b
-XX
 
 statistical analysis
 pinguin_normality_test.py

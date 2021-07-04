@@ -1,11 +1,9 @@
-#from mpl_toolkits.basemap import Basemap
 import string
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import colors
 import time
 from scipy.integrate import odeint
-from scipy.interpolate import spline
 import pandas as pd
 import csv
 from scipy.stats.stats import pearsonr   
@@ -262,8 +260,49 @@ color = 'black'
 color1 = 'tab:blue'
 color2 = 'tab:brown'
 
+###---------------------------------------- Labrador Sea -------------------------------------------------------###
+
+plt.subplot(4,4,1)
+plt.margins(x=0)
+plt.xticks(rotation=45)
+plt.ylim([-1.0, 2.5])
+model1 = plt.plot(month_genie, Ladrador_Sea_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(Labrador_month_net, Labrador_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
+
+
+
+plt.title('Labrador Sea (loc 1)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
+###---------------------------------------- biotrans57N -------------------------------------------------------###
+
+plt.subplot(4,4,2)
+plt.margins(x=0)
+plt.xticks(rotation=45)
+ax1[3, 1].set_ylim([-1.0, 2.5])
+model1 = plt.plot(month_genie, biotrans57_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(biotrans57N_month_net, biotrans57N_abund_net, marker='o', linestyle='none',markersize=5, color= color) #row=0, col=0
+ax1[3, 1].tick_params(axis='y', labelcolor= color)
+
+
+plt.title('Biotrans 57N(loc 2)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
+###---------------------------------------- NW Atlantic -------------------------------------------------------###
+plt.subplot(443)
+plt.ylim([-1.0, 2.5])
+model1 = plt.plot(month_genie, Atlantic_Current_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(Atlantic_Current_month_net, Atlantic_Current_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
+
+
+plt.title('NW Atlantic (loc 3)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
 ###------------------------------ BIOTRANS 47n ----------------------------------------------------###
-plt.subplot(441)
+plt.subplot(444)
 plt.ylim([-1.0, 2.5])
 x,y= (biotrans47_genie1, month_genie)
 x1, y1 = (biotrans47_genie1, month_genie)
@@ -271,40 +310,7 @@ model1 = plt.plot(y, x, color = color1) #row=0, col=0
 obsv =  plt.plot(biotrans47N_month_net, biotrans47_abund_net, marker='o', linestyle='none', markersize=5, color= color) #row=0, col=0
 
 
-plt.title('Biotrans 47N (No 1)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-
-###---------------------------------------- Atlantic_Current -------------------------------------------------------###
-plt.subplot(442)
-plt.ylim([-1.0, 2.5])
-model1 = plt.plot(month_genie, Atlantic_Current_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(Atlantic_Current_month_net, Atlantic_Current_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
-
-
-plt.title('NW Atlantic (No 2)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-###------------------------------  Japan ----------------------------------------------------###
-plt.subplot(443)
-plt.ylim([-1.0, 2.5])
-model1 = plt.plot(month_genie, Japan_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(Japan_month_net, Japan_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
-
-
-
-plt.title('NW Pacific (Japan Front, No 3)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-
-###------------------------------  BRAZIL 34S ----------------------------------------------------###
-plt.subplot(444)
-plt.ylim([-1.0, 2.5])
-model1 = plt.plot(month_genie, Brazil34_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(Brazil_34_month_net, Brazil_34_abund_net, marker='o', linestyle='none', markersize=7, color= color) #row=0, col=0
-
-
-plt.title('SE Brazilian margin 34S (No 4)')
+plt.title('Biotrans 47N (loc 4)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
 
@@ -316,56 +322,62 @@ obsv1 = plt.scatter(Azores_month_net_Jan, Azores_abund_net_Jan, marker = 'o', fa
 plt.ylim([-1.0, 2.5])
 
 
-plt.title('Azores front (No 5)')
+plt.title('Azores front (loc 6)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
+
 ###---------------------------------------- NE_Atlantic ------------------------------------------------------###
 plt.subplot(446)
 model1 = plt.plot(month_genie, NE_Atlantic_genie1, color = color1) #row=0, col=0
 obsv = plt.plot(NE_Atlantic_month_net, NE_Atlantic_abund_net, marker='o', linestyle='none', markersize=5, color= color) #row=0, col=0
 plt.ylim([-1.0, 2.5])
 
-plt.title('NE Atlantic (No 6)')
+plt.title('NE Atlantic (loc 7)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
-###------------------------------  BRAZIL 23S ----------------------------------------------------###
+
+###------------------------------  BRAZIL 34S ----------------------------------------------------###
 plt.subplot(447)
-model1 = plt.plot(month_genie, Brazil23_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(Brazil_23_month_net, Brazil_23_abund_net, marker='o', linestyle='none', markersize=7, color= color) #row=0, col=0
 plt.ylim([-1.0, 2.5])
+model1 = plt.plot(month_genie, Brazil34_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(Brazil_34_month_net, Brazil_34_abund_net, marker='o', linestyle='none', markersize=7, color= color) #row=0, col=0
 
 
-plt.title('SE Brazilian margin 23S (No 7)')
+plt.title('SE Brazilian margin 34S (loc 8)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
-###------------------------------  Caribbean ----------------------------------------------------###
+
+###------------------------------  Japan ----------------------------------------------------###
 plt.subplot(448)
+plt.ylim([-1.0, 2.5])
+model1 = plt.plot(month_genie, Japan_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(Japan_month_net, Japan_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
+
+
+
+plt.title('NW Pacific (Japan Front, loc 5)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
+
+###------------------------------  Caribbean ----------------------------------------------------###
+plt.subplot(449)
 model1 = plt.plot(month_genie, Caribbean_genie1, color = color1) #row=0, col=0
 obsv = plt.plot(Caribbean_month_net, Caribbean_abund_net, marker='o', linestyle='none', markersize=5, color= color) #row=0, col=0
 plt.ylim([-1.0, 2.5])
 
 
-plt.title('Caribbean Sea (No 8)')
+plt.title('Caribbean Sea (loc 9)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
-
-###------------------------------  SE_Atlantic ----------------------------------------------------###
-plt.subplot(449)
-model1 = plt.plot(month_genie, SE_Atlantic_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(SE_Atlantic_month_net, SE_Atlantic_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
-plt.ylim([-1.0, 2.5])
-
-plt.title('SE Atlantic Upwelling (No 9)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-###------------------------------  Panama ----------------------------------------------------###
-
+###------------------------------  BRAZIL 23S ----------------------------------------------------###
 plt.subplot(4,4,10)
-model1 = plt.plot(month_genie, Panama_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(Panama_month_net, Panama_abund_net, marker='o', linestyle='none', markersize=5, color= color) #row=0, col=0
+model1 = plt.plot(month_genie, Brazil23_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(Brazil_23_month_net, Brazil_23_abund_net, marker='o', linestyle='none', markersize=7, color= color) #row=0, col=0
 plt.ylim([-1.0, 2.5])
 
-plt.title('Panama Basin (No 10)')
+
+plt.title('SE Brazilian margin 23S (loc 10)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
 
@@ -377,49 +389,41 @@ model1 = plt.plot(month_genie, California_genie1, color = color1) #row=0, col=0
 obsv = plt.plot(California_month_net, California_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
 
 
-plt.title('California Upwelling (No 11)')
+plt.title('California Upwelling (loc 11)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
-###------------------------------  Arabian Sea ----------------------------------------------------###
+
+###------------------------------  Panama ----------------------------------------------------###
 
 plt.subplot(4,4,12)
+model1 = plt.plot(month_genie, Panama_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(Panama_month_net, Panama_abund_net, marker='o', linestyle='none', markersize=5, color= color) #row=0, col=0
+plt.ylim([-1.0, 2.5])
+
+plt.title('Panama Basin (loc 12)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
+
+###------------------------------  Arabian Sea ----------------------------------------------------###
+
+plt.subplot(4,4,13)
 plt.ylim([-1.0, 2.5])
 model1 = plt.plot(month_genie, Arabian_genie1, color = color1) #row=0, col=0
 obsv = plt.plot(Arabian_month_net, Arabian_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
 
 
 
-plt.title('Arabian Sea (No 12)')
+plt.title('Arabian Sea (loc 13)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
-
-###---------------------------------------- Labrador Sea -------------------------------------------------------###
-
-plt.subplot(4,4,13)
-plt.margins(x=0)
-plt.xticks(rotation=45)
-plt.ylim([-1.0, 2.5])
-model1 = plt.plot(month_genie, Ladrador_Sea_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(Labrador_month_net, Labrador_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
-
-
-
-plt.title('Labrador Sea (No 13)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-
-###---------------------------------------- biotrans57N -------------------------------------------------------###
-
+###------------------------------  SE_Atlantic ----------------------------------------------------###
 plt.subplot(4,4,14)
-plt.margins(x=0)
-plt.xticks(rotation=45)
-ax1[3, 1].set_ylim([-1.0, 2.5])
-model1 = plt.plot(month_genie, biotrans57_genie1, color = color1) #row=0, col=0
-obsv = plt.plot(biotrans57N_month_net, biotrans57N_abund_net, marker='o', linestyle='none',markersize=5, color= color) #row=0, col=0
-ax1[3, 1].tick_params(axis='y', labelcolor= color)
+model1 = plt.plot(month_genie, SE_Atlantic_genie1, color = color1) #row=0, col=0
+obsv = plt.plot(SE_Atlantic_month_net, SE_Atlantic_abund_net, marker='o', linestyle='none', markersize=5,color= color) #row=0, col=0
+plt.ylim([-1.0, 2.5])
 
-
-plt.title('Biotrans 57N(No 14)')
+plt.title('SE Atlantic Upwelling (loc 14)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
 

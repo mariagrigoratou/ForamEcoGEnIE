@@ -216,12 +216,74 @@ model = plt.plot(y,x, color= color1,  label= 'model')
 trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
 
 plt.xticks(rotation=45)
-plt.title('Subpolar Atlantic (No 15)')
+plt.title('Subpolar Atlantic (loc 15)')
 
+###---------------------------------------- PAPA -------------------------------------------------------###
+plt.subplot(432)
+plt.ylim(-5, 4)
+plt.margins(x=0)
 
+x,y= (Papa_abund_genie, Papa_month_genie)
+x1,y1= (Papa_abund_trap, Papa_month_trap)
+model = plt.plot(y,x, color= color1,  label= 'model')
+trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
+
+plt.title('Papa (loc 16)')
+plt.xticks(rotation=45)
+
+###------------------------------------ Weddell Sea a -34.8E Lon ---------------------------------------------------###
+plt.subplot(4,3,3)
+plt.ylim(-5, 4)
+plt.margins(x=0)
+x,y = (Southern_Ocean_abund_genie, Southern_Ocean_month_genie)
+x1,y1 = (Southern_Ocean_abund_trap, Southern_Ocean_month_trap)
+
+model = plt.plot(y,x, color= color1,  label= 'model')
+trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
+
+plt.title('Weddell Sea A (loc 17)')
+plt.xticks(rotation=45)
+
+###------------------------------------ Weddell Sea b -2E Lon ---------------------------------------------------###
+plt.subplot(4,3,4)
+plt.ylim(-5, 4)
+plt.margins(x=0)
+
+x,y= (Southern_Ocean_two_abund_genie, Southern_Ocean_two_month_genie)
+x1,y1= (Southern_Ocean_two_abund_trap, Southern_Ocean_two_month_trap)
+model = plt.plot(y,x, color= color1,  label= 'model')
+trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
+
+plt.title('Weddell Sea B (loc 18)')
+plt.xticks(rotation=45)
+###------------------------------------  Subantarctica ---------------------------------------------------###
+plt.subplot(4,3,5)
+plt.ylim(-5, 4)
+plt.margins(x=0)
+
+x,y= (Subantarctica_abund_genie, Subantarctica_month_genie)
+x1,y1= (Subantarctica_abund_trap, Subantarctica_month_trap)
+model = plt.plot(y,x, color= color1,  label= 'model')
+trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
+
+plt.title(' Subantarctic Zone (loc 19)')
+plt.xticks(rotation=45)
+
+###------------------------------------ subpolar JAPAN ---------------------------------------------------###
+plt.subplot(436)
+plt.ylim(-5, 4)
+plt.margins(x=0)
+
+x,y = (temperate_Japan_abund_genie, temperate_Japan_month_genie)
+x1,y1 = (temperate_Japan_abund_trap, temperate_Japan_month_trap)
+model = plt.plot(y,x, color= color1,  label= 'model')
+trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
+
+plt.title('NW Pacific subarctic (loc 20)')
+plt.xticks(rotation=45)
 
 ###------------------------------ SARGASSO ----------------------------------------------------###
-plt.subplot(432)
+plt.subplot(437)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -230,23 +292,11 @@ x1,y1= (Sargasso_abund_trap, Sargasso_month_trap)
 model = plt.plot(y,x, color= color1,  label= 'model')
 trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
 
-plt.title('Sargasso (No 16)')
+plt.title('Sargasso (loc 21)')
 plt.xticks(rotation=45)
-###---------------------------------------- CAPE BLANC ---------------------------------------------------###
-plt.subplot(433)
-plt.ylim(-5, 4)
-plt.margins(x=0)
 
-x,y= (Cape_Blanc_abund_genie, Cape_Blanc_month_genie)
-x1,y1= (Cape_Blanc_abund_trap, Cape_Blanc_month_trap)
-model = plt.plot(y,x, color= color1,  label= 'model')
-trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
-
-plt.title('Cape Blanc (No 17)')
-plt.xticks(rotation=45)
-#plt.legend(bbox_to_anchor=(0.8,0.90), loc='2', ncol=1,borderaxespad=0., fontsize=13)
 ###---------------------------------------- AZORES ------------------------------------------------------###
-plt.subplot(434)
+plt.subplot(438)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -255,10 +305,13 @@ x1,y1= (Azores_abund_trap, Azores_month_trap)
 model = plt.plot(y,x, color= color1, label= 'model')
 trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
 
-plt.title('Azores (No 18)')
+plt.title('Azores (loc 22)')
 plt.xticks(rotation=45)
+
+
+
 ###---------------------------------------- BRAZIL ------------------------------------------------------###
-plt.subplot(435)
+plt.subplot(439)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -268,10 +321,40 @@ model = plt.plot(y,x, color= color1,  label= 'model')
 trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
 
 
-plt.title('W Atlantic (No 19)')
+plt.title('W Atlantic (loc 23)')
 plt.xticks(rotation=45)
+
+
+
+###------------------------------------ SUBTROPICS JAPAN ---------------------------------------------------###
+plt.subplot(4,3,10)
+plt.ylim(-5, 4)
+plt.margins(x=0)
+x,y = (subtropics_Japan_abund_genie, subtropics_Japan_month_genie)
+x1,y1 = (subtropics_Japan_abund_trap, subtropics_Japan_month_trap)
+
+model = plt.plot(y,x, color= color1,  label= 'model')
+trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
+
+plt.title('SW Pacific subtropic (loc 24)')
+plt.xticks(rotation=45)
+
+###---------------------------------------- CAPE BLANC ---------------------------------------------------###
+plt.subplot(4,3,11)
+plt.ylim(-5, 4)
+plt.margins(x=0)
+
+x,y= (Cape_Blanc_abund_genie, Cape_Blanc_month_genie)
+x1,y1= (Cape_Blanc_abund_trap, Cape_Blanc_month_trap)
+model = plt.plot(y,x, color= color1,  label= 'model')
+trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
+
+plt.title('Cape Blanc (loc 25)')
+plt.xticks(rotation=45)
+#plt.legend(bbox_to_anchor=(0.8,0.90), loc='2', ncol=1,borderaxespad=0., fontsize=13)
+
 ###---------------------------------------- ARABIAN SEA ------------------------------------------------------###
-plt.subplot(436)
+plt.subplot(4,3,12)
 plt.ylim(-5, 4)
 plt.margins(x=0)
 
@@ -281,86 +364,10 @@ model = plt.plot(y,x, color= color1,  label= 'model')
 trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
 
 
-plt.title('Arabian Sea (No 20)')
-plt.xticks(rotation=45)
-
-###---------------------------------------- PAPA -------------------------------------------------------###
-plt.subplot(437)
-plt.ylim(-5, 4)
-plt.margins(x=0)
-
-x,y= (Papa_abund_genie, Papa_month_genie)
-x1,y1= (Papa_abund_trap, Papa_month_trap)
-model = plt.plot(y,x, color= color1,  label= 'model')
-trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
-
-plt.title('Papa (No 21)')
-plt.xticks(rotation=45)
-
-###------------------------------------ TEMPERATE JAPAN ---------------------------------------------------###
-plt.subplot(438)
-plt.ylim(-5, 4)
-plt.margins(x=0)
-
-x,y = (temperate_Japan_abund_genie, temperate_Japan_month_genie)
-x1,y1 = (temperate_Japan_abund_trap, temperate_Japan_month_trap)
-model = plt.plot(y,x, color= color1,  label= 'model')
-trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
-
-plt.title('NW Pacific subarctic (No 22)')
-plt.xticks(rotation=45)
-
-###------------------------------------ SUBTROPICS JAPAN ---------------------------------------------------###
-plt.subplot(439)
-plt.ylim(-5, 4)
-plt.margins(x=0)
-x,y = (subtropics_Japan_abund_genie, subtropics_Japan_month_genie)
-x1,y1 = (subtropics_Japan_abund_trap, subtropics_Japan_month_trap)
-
-model = plt.plot(y,x, color= color1,  label= 'model')
-trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
-
-plt.title('NW Pacific subtropic (No 23)')
+plt.title('Arabian Sea (loc 26)')
 plt.xticks(rotation=45)
 
 
-###------------------------------------ Weddell Sea a -34.8E Lon ---------------------------------------------------###
-plt.subplot(4,3,10)
-plt.ylim(-5, 4)
-plt.margins(x=0)
-x,y = (Southern_Ocean_abund_genie, Southern_Ocean_month_genie)
-x1,y1 = (Southern_Ocean_abund_trap, Southern_Ocean_month_trap)
-
-model = plt.plot(y,x, color= color1,  label= 'model')
-trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
-
-plt.title('Weddell Sea A (No 24)')
-plt.xticks(rotation=45)
-
-###------------------------------------ Weddell Sea b -2E Lon ---------------------------------------------------###
-plt.subplot(4,3,11)
-plt.ylim(-5, 4)
-plt.margins(x=0)
-
-x,y= (Southern_Ocean_two_abund_genie, Southern_Ocean_two_month_genie)
-x1,y1= (Southern_Ocean_two_abund_trap, Southern_Ocean_two_month_trap)
-model = plt.plot(y,x, color= color1,  label= 'model')
-trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
-
-plt.title('Weddell Sea B (No 25)')
-plt.xticks(rotation=45)
-###------------------------------------  Subantarctica ---------------------------------------------------###
-plt.subplot(4,3,12)
-plt.ylim(-5, 4)
-plt.margins(x=0)
-
-x,y= (Subantarctica_abund_genie, Subantarctica_month_genie)
-x1,y1= (Subantarctica_abund_trap, Subantarctica_month_trap)
-model = plt.plot(y,x, color= color1,  label= 'model')
-trap = plt.scatter(y1,x1, color= color, s =20, edgecolors='none', label = 'trap')
-
-plt.title(' Subantarctic Zone (No 26)')
-plt.xticks(rotation=45)
 
 
 label = [ "model", "trap"]
