@@ -148,9 +148,51 @@ color = 'black'
 color1 = 'tab:blue'
 color2 = 'tab:brown'
 
+###---------------------------------------- biotrans57N -------------------------------------------------------###
+plt.subplot(4,4,1)
+plt.ylim(-4, -1)
+plt.margins(x=0)
+
+x, y = (biotrans57_foram ,month_genie)
+x1, y1 = (zoo_biotrans57 ,month_genie)
+foram = plt.plot(y,x, color= color1, label= 'foram')
+zoo = plt.plot(y1,x1, color= color, label = 'zoo')
+
+
+plt.title('Biotrans 57N (loc 1)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
+###---------------------------------------- Labrador Sea -------------------------------------------------------###
+plt.subplot(4,4,2)
+plt.ylim(-4, -1)
+plt.margins(x=0)
+
+x, y = ( Ladrador_Sea_foram,month_genie)
+x1, y1 = ( zoo_Labrador,month_genie)
+foram = plt.plot(y,x, color= color1, label= 'foram')
+zoo = plt.plot(y1,x1, color= color, label = 'zoo')
+
+plt.title('Labrador Sea (loc 2)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
+###---------------------------------------- Atlantic_Current -------------------------------------------------------###
+
+plt.subplot(443)
+plt.ylim(-4, -1)
+plt.margins(x=0)
+x,y = (Atlantic_Current_foram, month_genie)
+x1, y1 = (zoo_Atlantic_Current, month_genie)
+foram = plt.plot(y,x, color= color1, label= 'foram')
+zoo = plt.plot(y1,x1, color= color, label = 'zoo')
+
+plt.title('NW Atlantic (loc 3)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
 ###------------------------------ BIOTRANS 47n ----------------------------------------------------###
 
-plt.subplot(441)
+plt.subplot(444)
 #plt.subplot(z[0,0,0])
 plt.margins(x=0)
 plt.ylim(-4, -1)
@@ -161,25 +203,12 @@ foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
 plt.xticks(rotation=45)
-plt.title('Biotrans 47N (No 1)')
+plt.title('Biotrans 47N (loc 4)')
 
 
-###---------------------------------------- Atlantic_Current -------------------------------------------------------###
 
-plt.subplot(442)
-plt.ylim(-4, -1)
-plt.margins(x=0)
-x,y = (Atlantic_Current_foram, month_genie)
-x1, y1 = (zoo_Atlantic_Current, month_genie)
-foram = plt.plot(y,x, color= color1, label= 'foram')
-zoo = plt.plot(y1,x1, color= color, label = 'zoo')
-
-plt.title('NW Atlantic (No 2)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-
-###------------------------------  Japan ----------------------------------------------------###
-plt.subplot(443)
+###------------------------------  Japan Front ----------------------------------------------------###
+plt.subplot(445)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
@@ -188,25 +217,13 @@ x1, y1 = ( zoo_Japan,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-plt.title('NW Pacific (Japan Front, No 3)')
+plt.title('NW Pacific (Japan Front, loc 5)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
-###------------------------------  BRAZIL 34S ----------------------------------------------------###
 
-plt.subplot(444)
-plt.ylim(-4, -1)
-plt.margins(x=0)
 
-x, y = ( Brazil34_foram,month_genie)
-x1, y1 = ( zoo_Brazil_34,month_genie)
-foram = plt.plot(y,x, color= color1, label= 'foram')
-zoo = plt.plot(y1,x1, color= color, label = 'zoo')
-
-plt.title('SE Brazilian margin 34S (No 4)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
 ###---------------------------------------- AZORES ------------------------------------------------------###
-plt.subplot(445)
+plt.subplot(446)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
@@ -215,12 +232,14 @@ x1, y1 = (zoo_Azores,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-plt.title('Azores front (No 5)')
+plt.title('Azores front (loc 6)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
+
+
 ###---------------------------------------- NE_Atlantic ------------------------------------------------------###
 
-plt.subplot(446)
+plt.subplot(447)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
@@ -229,25 +248,28 @@ x1, y1 = (zoo_NE_Atlantic,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-plt.title('NE Atlantic (No 6)')
+plt.title('NE Atlantic (loc 7)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
-###------------------------------  BRAZIL 23S ----------------------------------------------------###
 
-plt.subplot(447)
+###------------------------------  BRAZIL 34S ----------------------------------------------------###
+
+plt.subplot(448)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
-x, y = (Brazil23_foram,month_genie)
-x1, y1 = (zoo_Brazil_23,month_genie)
+x, y = ( Brazil34_foram,month_genie)
+x1, y1 = ( zoo_Brazil_34,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-plt.title('SE Brazilian margin 23S (No 7)')
+plt.title('SE Brazilian margin 34S (loc 8)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
+
+
 ###------------------------------  Caribbean ----------------------------------------------------###
-plt.subplot(448)
+plt.subplot(449)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
@@ -256,36 +278,26 @@ x1, y1 = (zoo_Caribbean,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-plt.title('Caribbean Sea (No 8)')
+plt.title('Caribbean Sea (loc 9)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
 
-###------------------------------  SE_Atlantic ----------------------------------------------------###
-plt.subplot(449)
-plt.ylim(-4, -1)
-plt.margins(x=0)
 
-x, y = (SE_Atlantic_foram,month_genie)
-x1, y1 = (zoo_SE_Atlantic,month_genie)
-foram = plt.plot(y,x, color= color1, label= 'foram')
-zoo = plt.plot(y1,x1, color= color, label = 'zoo')
+###------------------------------  BRAZIL 23S ----------------------------------------------------###
 
-plt.title('SE Atlantic Upwelling (No 9)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-###------------------------------  Panama ----------------------------------------------------###
 plt.subplot(4,4,10)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
-x, y = (Panama_foram,month_genie)
-x1, y1 = (zoo_Panama,month_genie)
+x, y = (Brazil23_foram,month_genie)
+x1, y1 = (zoo_Brazil_23,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-plt.title('Panama Basin (No 10)')
+plt.title('SE Brazilian margin 23S (loc 10)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
+
 
 ###------------------------------  California ----------------------------------------------------###
 plt.subplot(4,4,11)
@@ -297,12 +309,28 @@ x1, y1 = (zoo_California,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-plt.title('California Upwelling (No 11)')
+plt.title('California Upwelling (loc 11)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
 
-###------------------------------  Arabian Sea ----------------------------------------------------###
+###------------------------------  Panama ----------------------------------------------------###
 plt.subplot(4,4,12)
+plt.ylim(-4, -1)
+plt.margins(x=0)
+
+x, y = (Panama_foram,month_genie)
+x1, y1 = (zoo_Panama,month_genie)
+foram = plt.plot(y,x, color= color1, label= 'foram')
+zoo = plt.plot(y1,x1, color= color, label = 'zoo')
+
+plt.title('Panama Basin Upwelling (loc 12)')
+plt.margins(x=0)
+plt.xticks(rotation=45)
+
+
+
+###------------------------------  Arabian Sea ----------------------------------------------------###
+plt.subplot(4,4,13)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
@@ -312,38 +340,30 @@ foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
 
-plt.title('Arabian Sea (No 12)')
+plt.title('Arabian Sea Upwelling (No 13)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
 
-###---------------------------------------- Labrador Sea -------------------------------------------------------###
-plt.subplot(4,4,13)
-plt.ylim(-4, -1)
-plt.margins(x=0)
 
-x, y = ( Ladrador_Sea_foram,month_genie)
-x1, y1 = ( zoo_Labrador,month_genie)
-foram = plt.plot(y,x, color= color1, label= 'foram')
-zoo = plt.plot(y1,x1, color= color, label = 'zoo')
-
-plt.title('Labrador Sea (No 13)')
-plt.margins(x=0)
-plt.xticks(rotation=45)
-
-###---------------------------------------- biotrans57N -------------------------------------------------------###
+###------------------------------  SE_Atlantic ----------------------------------------------------###
 plt.subplot(4,4,14)
 plt.ylim(-4, -1)
 plt.margins(x=0)
 
-x, y = (biotrans57_foram ,month_genie)
-x1, y1 = (zoo_biotrans57 ,month_genie)
+x, y = (SE_Atlantic_foram,month_genie)
+x1, y1 = (zoo_SE_Atlantic,month_genie)
 foram = plt.plot(y,x, color= color1, label= 'foram')
 zoo = plt.plot(y1,x1, color= color, label = 'zoo')
 
-
-plt.title('Biotrans 57N(No 14)')
+plt.title('SE Atlantic Upwelling (loc 14)')
 plt.margins(x=0)
 plt.xticks(rotation=45)
+
+
+
+
+
+
 
 ################ ------------------------------------------------------------------------------------ ###########
 

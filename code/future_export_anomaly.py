@@ -14,8 +14,8 @@ from scipy.stats.stats import pearsonr
 
 
 ###---------------------------------- read csv data rcp6ecogenie ----------------------------------------------------###
-rcp6 = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\future_biomass_RCP6.csv')
-rcp8p5= pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\future_biomass_RCP8p5.csv')				
+rcp6 = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\future_CaCO3_RCP6.csv')
+rcp8p5= pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\future_CaCO3_RCP8p5.csv')				
 
 
 ###------------------------------ GLOBAL ----------------------------------------------------###
@@ -311,11 +311,11 @@ fig.legend((rcp6, rcp8p5),labels= label,
             fontsize=11) 
 
 fig.text(0.50, 0.95,
-        'Foraminifera relative (%) biomass anomaly (future - preindustrial)',
+        r'Foraminifera relative (%) CaCO$_3$ anomaly (future - preindustrial)',
         ha='center', fontsize = 16)
 
 fig.text(0.080, 0.35,
-        '% biomass anomaly',
+        r'% CaCO$_3$ anomaly',
         ha='center', rotation = 'vertical', fontsize = 16)
 		
 
