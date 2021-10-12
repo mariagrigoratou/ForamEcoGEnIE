@@ -14,31 +14,31 @@ import csv
 
 ###---------------------------------- read csv data ----------------------------------------------------###
 
-df_genie = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\sigma2pal09_export.csv')
+df_genie = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\sigma2pal09_export.csv')
 #df_genie.dropna(inplace=True)
-df_NA = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Jonkers_2010_Subpolar_Atlantic.csv')
+df_NA = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Jonkers_2010_Subpolar_Atlantic.csv')
 #df_NA.dropna(inplace=True)
-df_trap_Papa = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Papa_trap.csv')
+df_trap_Papa = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Papa_trap.csv')
 #df_trap_Papa.dropna(inplace=True)
-df_Azores = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Azores_trap.csv')
+df_Azores = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Azores_trap.csv')
 #df_Azores.dropna(inplace=True)
-df_Cape_Blanc = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Cape_Blanc.csv')
+df_Cape_Blanc = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Cape_Blanc.csv')
 #df_Cape_Blanc.dropna(inplace=True)
-df_Southern_Ocean = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\W_Sea_a.csv')
+df_Southern_Ocean = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\W_Sea_a.csv')
 #df_Southern_Ocean.dropna(inplace=True)
-df_Southern_Ocean_two = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\W_Sea_b.csv')
+df_Southern_Ocean_two = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\W_Sea_b.csv')
 #f_Southern_Ocean_two.dropna(inplace=True)
-df_subtropics_Japan = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\subtropics_Japan.csv')
+df_subtropics_Japan = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\subtropics_Japan.csv')
 #df_subtropics_Japan.dropna(inplace=True)
-df_temperate_Japan = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Temperate_Japan.csv')
+df_temperate_Japan = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Temperate_Japan.csv')
 #df_temperate_Japan.dropna(inplace=True)
-df_Sargasso = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Sargasso.csv')
+df_Sargasso = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Sargasso.csv')
 #df_Sargasso.dropna(inplace=True)
-df_Brazil = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Brazil.csv')
+df_Brazil = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Brazil.csv')
 #df_Brazil.dropna(inplace=True)
-df_Arabian = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Arabian.csv')
+df_Arabian = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Arabian.csv')
 #df_Arabian.dropna(inplace=True)
-df_Subantarctica = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Subantarctica.csv')
+df_Subantarctica = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\Traps\Subantarctica.csv')
 #df_Subantarctica.dropna(inplace=True)
 
 ###------------------------------ SUBPOLAR ATLANTIC ----------------------------------------------------###
@@ -370,12 +370,12 @@ plt.xticks(rotation=45)
 
 
 
-label = [ "model", "trap"]
+label = [ "model", "obsv"]
 fig.legend((model, trap),labels= label,
             loc = 'upper right', 
-            ncol=1,
+            #ncol=1,
             frameon=False, 
-            fontsize=11) 
+            fontsize=14) 
 
 
 fig.text(0.50, 0.95,
@@ -390,8 +390,8 @@ fig.text(0.50, 0.03,
         'Time (months)',
         ha='center', fontsize = 16)
 
-plt.show()
+#plt.show()
 
-
+fig.savefig('D:\myimage1.tiff', format='tiff', dpi=300)
 
 

@@ -370,12 +370,12 @@ plt.xticks(rotation=45)
 label = [ "foram",  "zoo"]
 fig.legend((foram, zoo,),labels= label,
             loc = 'upper right', 
-            ncol=3,
+            #ncol=2,
             frameon=False, 
-            fontsize=11) 
+            fontsize=14) 
 
 fig.text(0.50, 0.95,
-        'Foraminifera vs Zooplankton 190 um monthly biomass (mmol C m$^{-3}$)',
+        'Foraminifera vs Zooplankton 190 $\mathit{μ}$m monthly biomass (mmol C m$^{-3}$)',
         ha='center', fontsize = 16)
 
 fig.text(0.080, 0.25,

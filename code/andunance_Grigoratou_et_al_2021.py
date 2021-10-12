@@ -12,35 +12,35 @@ from scipy.stats.stats import pearsonr
 
 
 ###---------------------------------- read csv data observations ----------------------------------------------------###
-df_biotrans = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Biotrans_net.csv')
+df_biotrans = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Biotrans_net.csv')
 #df_biotrans.dropna(inplace=True)
-df_biotrans57N = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Biotrans57N_net.csv')
+df_biotrans57N = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Biotrans57N_net.csv')
 df_biotrans57N.dropna(inplace=True)
-df_Azores = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Azores_net.csv')
+df_Azores = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Azores_net.csv')
 #df_Azores.dropna(inplace=True)
-df_Azores_Jan = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Azores_net_January.csv')
-df_NE_Atlantic = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\NE_Atlantic.csv')
+df_Azores_Jan = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Azores_net_January.csv')
+df_NE_Atlantic = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\NE_Atlantic.csv')
 df_NE_Atlantic.dropna(inplace=True)
-df_Brazil_34 = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Brazil_34.csv')
+df_Brazil_34 = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Brazil_34.csv')
 #df_Brazil_34.dropna(inplace=True)
-df_Brazil_23 = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Brazil_23.csv')
+df_Brazil_23 = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Brazil_23.csv')
 #df_Brazil_23.dropna(inplace=True)
-df_Caribbean = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Caribbean.csv')
+df_Caribbean = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Caribbean.csv')
 #df_Caribbean.dropna(inplace=True)
-df_Japan = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Japan.csv')
+df_Japan = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Japan.csv')
 #df_Brazil_23.dropna(inplace=True)
-df_Panama = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Panama.csv')
-df_SE_Atlantic = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\SE_Atlantic.csv')
-df_Arabian = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Arabian.csv')
-df_California = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\California.csv')
-df_Ross_Sea = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Antarctica.csv')
-df_Arctic = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Arctic.csv')
-df_Atlantic_Current = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Atlantic_Current.csv')
-df_Labrador = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Labrador.csv')
+df_Panama = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Panama.csv')
+df_SE_Atlantic = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\SE_Atlantic.csv')
+df_Arabian = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Arabian.csv')
+df_California = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\California.csv')
+df_Ross_Sea = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Antarctica.csv')
+df_Arctic = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Arctic.csv')
+df_Atlantic_Current = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Atlantic_Current.csv')
+df_Labrador = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\OBSV\\Nets\\Labrador.csv')
 
 ###---------------------------------- read csv data foramecogenie ----------------------------------------------------###
-df_phyto = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\PRESENT\chla\\Total_phyto_genie.csv')
-df_sigma2pal09 = pd.read_csv('E:PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\sigma2pal09_abundance.csv')				
+df_phyto = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\PRESENT\chla\\Total_phyto_genie.csv')
+df_sigma2pal09 = pd.read_csv('D:\PHD\FORAMECOGENIE_MARCH_2020\EXCEL_METAANALYSIS\FUTURE\python_excel\\sigma2pal09_abundance.csv')				
 ###------------------------------ BIOTRANS 47N ----------------------------------------------------###
 
 Month_genie = df_sigma2pal09['Month']
@@ -435,9 +435,9 @@ plt.xticks(rotation=45)
 label = [ "model",  "obsv"]
 fig.legend((model1, obsv,),labels= label,
             loc = 'upper right', 
-            ncol=3,
+            #ncol=3,
             frameon=False, 
-            fontsize=11) 
+            fontsize=14) 
 
 fig.text(0.50, 0.95,
         'Foraminifera monthly abundance (ind C m$^{-3}$)',
@@ -451,8 +451,11 @@ fig.text(0.080, 0.25,
 fig.text(0.50, 0.03,
         'Time (months)',
         ha='center', fontsize = 16)
+
+
 plt.show()
 
+#fig.savefig('D:\myimage1.tiff', format='tiff', dpi=300)
 
 
 
