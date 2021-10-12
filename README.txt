@@ -12,7 +12,7 @@ June 30, 2021 -- README.txt file creation (M.G)
 
 Here you can find all the data and code related to the manuscript
 
-mode_output	: included the Foramecogenie output (nc.files)
+mode_output	: includes the Foramecogenie output (nc.files)
 
 code		: includes the code for the figures and statistical analysis (python)
 
